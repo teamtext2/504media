@@ -1,1 +1,168 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/data/css/style.css">
+    <script src="/data/js/main.js" defer></script>
+    <!-- Primary Meta Tags -->
+    <title>504 Media</title>
+    <meta name="title" content="504 Media - Nền tảng Tin tức & Giải trí | Text2">
+    <meta name="description"
+        content="504 Media - Nền tảng cập nhật tin tức nhanh chóng, chính xác và xu hướng mới nhất với giao diện tương lai từ hệ sinh thái Text2.">
+    <meta name="keywords" content="504 Media, Text2, Text2 News, tin tức, công nghệ, báo chí, Hóa Nhật Anh">
+    <meta name="author" content="Text2 Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://504.text2.co/">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" href="https://504.text2.co/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://504.text2.co/apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook / Zalo -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://504.text2.co/">
+    <meta property="og:title" content="504 Media - Nền tảng Tin tức & Giải trí | Text2">
+    <meta property="og:description"
+        content="504 Media - Nền tảng cập nhật tin tức nhanh chóng, chính xác và xu hướng mới nhất với giao diện tương lai từ hệ sinh thái Text2.">
+    <meta property="og:image" content="https://504.text2.co/apple-touch-icon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://504.text2.co/">
+    <meta property="twitter:title" content="504 Media - Nền tảng Tin tức & Giải trí | Text2">
+    <meta property="twitter:description"
+        content="504 Media - Nền tảng cập nhật tin tức nhanh chóng, chính xác và xu hướng mới nhất với giao diện tương lai từ hệ sinh thái Text2.">
+    <meta property="twitter:image" content="https://504.text2.co/apple-touch-icon.png">
+
+    <!-- Schema Markup (JSON-LD) cho chuẩn SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "504 Media",
+      "alternateName": ["Text2 News", "504 Media"],
+      "url": "https://504.text2.co",
+      "logo": "https://504.text2.co/apple-touch-icon.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Hóa Nhật Anh",
+        "jobTitle": "CEO Text2"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Text2",
+        "url": "https://text2.co"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Background Effect -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="#" class="logo">
+                <img src="https://504.text2.co/favicon.ico" alt="504 Media Logo" class="logo-icon"
+                    onerror="this.src='https://504.text2.co/apple-touch-icon.png'">
+                504 Media
+            </a>
+
+            <!-- Nút bấm SVG Theme Toggle -->
+            <button id="theme-toggle" aria-label="Đổi giao diện">
+                <!-- Icon Mặt trời (Hiển thị khi ở Dark Mode) -->
+                <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line>
+                </svg>
+                <!-- Icon Mặt trăng (Hiển thị khi ở Light Mode) -->
+                <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="live-status-bar"></div>
+    </header>
+
+    <div class="container">
+        <!-- Loading State -->
+        <div id="loading-state" class="loader-container">
+            <div class="spinner"></div>
+            <p style="color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px;">Đang tải dữ liệu từ máy chủ
+                Text2...</p>
+        </div>
+
+        <!-- Content Loaded -->
+        <div id="content-loaded" style="display: none;">
+            <!-- Ticker (Đã bỏ chữ TRỰC TIẾP theo lệnh sếp) -->
+            <div class="ticker-wrapper">
+                <div id="news-ticker"></div>
+            </div>
+
+            <!-- Main Layout -->
+            <div class="main-content">
+                <div id="hero-news">
+                    <!-- Hero populated by JS -->
+                </div>
+
+                <div class="sidebar">
+                    <h2 class="sidebar-title">Đang thịnh hành</h2>
+                    <div id="news-sidebar">
+                        <!-- Sidebar populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <h2 class="sidebar-title" style="margin-bottom: 24px;">Tin tức mới nhất</h2>
+            <div id="news-grid" class="news-grid">
+                <!-- Grid populated by JS -->
+            </div>
+
+            <!-- More Stories -->
+            <div id="more-news-container" style="display: none;">
+                <h2 class="sidebar-title" style="margin-bottom: 24px; border-left-color: var(--text-muted);">Khám phá
+                    thêm</h2>
+                <div id="news-footer-grid" class="news-grid">
+                    <!-- Footer grid populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Chuẩn SEO -->
+    <footer class="site-footer">
+        <p>504 Media là sản phẩm tin tức tổng hợp tự động, được phát triển và vận hành bởi hệ sinh thái công nghệ <a
+                href="https://text2.co/" target="_blank" rel="dofollow">Text2.co</a>.</p>
+    </footer>
+
+    <!-- Mũi tên SVG dùng chung trong JS -->
+    <template id="arrow-svg-template">
+        <div class="card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </div>
+    </template>
+</body>
+
+</html>
