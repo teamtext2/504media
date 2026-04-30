@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://504.text2.co/sitemap.xml

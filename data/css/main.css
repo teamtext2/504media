@@ -110,13 +110,17 @@ header {
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: -0.5px;
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
     color: var(--text-main);
+    margin: 0;
 }
 
 .logo-icon {
@@ -571,6 +575,19 @@ body.light-mode .glass-card:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Screen Reader Only (SEO optimization) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* Responsive */
